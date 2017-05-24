@@ -1,0 +1,19 @@
+
+# For creating speaking modes and initialize the voice sub-folders.
+
+# The format is:
+# (button1 - button5) = (Button text) , (First word) , (Middle words) , (Ending word)
+
+# Explanation:
+# (button1 - button5) - button1/button2/button3/button4/button5
+# (Button text) - Text to display on the buttons.
+# (First word) - Folder name to load the word from. For the starting word.
+# (Middle words) - Folder name to load the word from. For all the words between the starting and ending words.
+# (Ending word) - Folder name to load the word from. For the Ending word.
+
+# To make the button invisible, just set button text to “none”.
+
+button1 = Default Speaking , normal , normal , normal
+button2 = Style-1 Speaking , normal , high , normal
+button4 = none
+button5 = none

@@ -1,0 +1,21 @@
+
+# This is text file for providing voicebank’s information.
+
+# For voicebank developers:
+# - Edit values after “=“ signs.
+# - “name”, ”greeting”, “picture” and “spoken” are required for program to work.
+# - You can provide any other information you want,
+# but please keep “name”, “greeting”, “picture” and “spoken”.
+
+name = Printto Magicbeat
+greeting = Hello, this is Printto Magicbeat Speaking :)
+picture = pic.png
+
+# %s is where the last spoken sentence will replace.
+
+spoken = I've just spoken "%s", yay! :D
+
+# When you finished editing this file,
+# you can delete the lines that begins with “#”
+
+version = 1.2
