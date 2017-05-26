@@ -97,7 +97,7 @@ public class SpeakGUI extends JFrame implements Observer{
 		//reset
 		speech.setVoiceLocation(voiceLocation);
 		//initialize
-		CSVReader readChar = new CSVReader(voiceLocation + "/char.txt");
+		LoadVoiceConfig readChar = new LoadVoiceConfig(voiceLocation + "/char.txt");
 		readChar.setDelimiter('=');
 		List<String[]> charactor = new ArrayList<String[]>();
 		while(readChar.hasNext()){
@@ -136,7 +136,7 @@ public class SpeakGUI extends JFrame implements Observer{
 		button5.setText("none");
 		//initialize
 		try{
-			CSVReader readChar = new CSVReader(voiceLocation + "config.txt");
+			LoadVoiceConfig readChar = new LoadVoiceConfig(voiceLocation + "config.txt");
 			readChar.setDelimiter('=');
 			List<String[]> charactor = new ArrayList<String[]>();
 			while(readChar.hasNext()){

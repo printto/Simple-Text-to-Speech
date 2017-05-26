@@ -34,7 +34,7 @@ public class Speech extends Observable{
 	 * Initialize speaking modes.
 	 */
 	public void initModes(){
-		CSVReader readChar = new CSVReader(voiceLocation + "config.txt");
+		LoadVoiceConfig readChar = new LoadVoiceConfig(voiceLocation + "config.txt");
 		readChar.setDelimiter('=');
 		List<String[]> charactor = new ArrayList<String[]>();
 		while(readChar.hasNext()){

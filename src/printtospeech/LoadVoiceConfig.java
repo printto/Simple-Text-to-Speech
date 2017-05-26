@@ -13,12 +13,12 @@ import java.net.URL;
 import java.util.NoSuchElementException;
 
 /**
- * This class reads CSV files and return array of elements in the line.
+ * This class read txt files and return array of elements in the line.
  * @author Pappim Pipatkasrira
  * @version 1.0
  * @since Mar 11, 2017
  */
-public class CSVReader {
+public class LoadVoiceConfig {
 
 	//Delimiter that seperates elements in CSV file.
 	String delimiter = "=";
@@ -35,44 +35,30 @@ public class CSVReader {
 	 * Create CSVReader from InputStream.
 	 * @param inStream as InputStream.
 	 */
-	public CSVReader ( InputStream inStream ){
+	public LoadVoiceConfig ( InputStream inStream ){
 		this.inStream = inStream;
 		Reader reader = new InputStreamReader(inStream);
 		buffer = new BufferedReader(reader);
 	}
 
 	/**
-	 * Create CSVReader from String of URL or file location.
-	 * @param inString of URL or file location.
+	 * Create LoadVoiceConfig from String of URL or file location.
+	 * @param inString of file location.
 	 */
-	public CSVReader ( String inString){
-		String URLPATTERN = "^\\w\\w+://\\S+";
-		if( inString.matches(URLPATTERN)){
-			try {
-				inStream = new URL(inString).openStream();
-				Reader reader = new InputStreamReader(inStream);
-				buffer = new BufferedReader(reader);
-			} catch (MalformedURLException e) {
-				throw new RuntimeException("MalformedURLException: not valid URL.");
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-
-		}
-		else{
-			try {
-				File file = new File(inString);
-				inStream = new FileInputStream(file);
-				Reader reader = new InputStreamReader(inStream);
-				buffer = new BufferedReader(reader);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+	public LoadVoiceConfig ( String inString){
+		try {
+			File file = new File(inString);
+			inStream = new FileInputStream(file);
+			Reader reader = new InputStreamReader(inStream);
+			buffer = new BufferedReader(reader);
+		} catch (FileNotFoundException e) {
+			System.err.println("File" + inString + "not found");
 		}
 	}
 
+
 	/**
-	 * Close CSVReader.
+	 * Close LoadVoiceConfig.
 	 * Close InputStream and BufferReader in CSVReader.
 	 */
 	public void close(){
@@ -85,7 +71,7 @@ public class CSVReader {
 	}
 
 	/**
-	 * Set delimiter that is used to separate the CSV file.
+	 * Set delimiter that is used to separate the config txt file.
 	 * @param Character that use to separate the file.
 	 */
 	public void setDelimiter(char c){
