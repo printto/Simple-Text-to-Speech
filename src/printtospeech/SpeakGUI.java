@@ -116,7 +116,6 @@ public class SpeakGUI extends JFrame implements Observer{
 				this.spokenFormat = info[1];
 				break;
 			default:
-
 			}
 		}
 	}
