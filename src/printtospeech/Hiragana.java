@@ -3,6 +3,12 @@ package printtospeech;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Traslate Hiragana to Romaji.
+ * @author Pappim Pipatkasrira
+ * @version 1.0
+ * @since May 26, 2017
+ */
 public class Hiragana {
 
 	/**
