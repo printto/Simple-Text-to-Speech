@@ -78,8 +78,6 @@ public class SpeakGUI extends JFrame implements Observer{
 	 * Initialize TextField Format for speaking speed
 	 */
 	public void initTextFormat(){
-		this.setTitle("Printto Speech");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		NumberFormat numberFormat = NumberFormat.getIntegerInstance();
 		NumberFormatter numberFormatter = new NumberFormatter(numberFormat);
 		numberFormatter.setValueClass(Integer.class);
@@ -172,12 +170,12 @@ public class SpeakGUI extends JFrame implements Observer{
 
 	}
 
-
-
 	/**
 	 * Initialize components.
 	 */
 	private void initComponents() {
+		this.setTitle(name);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.getContentPane().removeAll();
 		this.setLayout(new BorderLayout());
 		this.setMinimumSize(new Dimension(750, 400));
