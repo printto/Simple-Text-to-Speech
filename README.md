@@ -42,3 +42,7 @@ An InputStream ties up a tiny kernel resource, a low level file handle. In addit
 ```
 audioIn.close
 ```
+
+### Java API pages
+- [AudioInputStream](https://docs.oracle.com/javase/7/docs/api/javax/sound/sampled/AudioInputStream.html)
+- [Clip](https://docs.oracle.com/javase/7/docs/api/javax/sound/sampled/Clip.html)
