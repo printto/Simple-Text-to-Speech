@@ -16,7 +16,7 @@ Words are from the audio files in the voicebank.
 ### Installation
 1. [Download this zip file](https://github.com/printto/Simple-Text-to-Speech/blob/master/runnable%20program.zip)
 2. Extract and run Simple Text-to-Speech.jar
-3. The voicebank that comes with the program is the lite voicebank that support only 1 speaking mode only.  For full program demostration, [download full voicebank sample (149 MB)](https://drive.google.com/open?id=0B-zXMFcTjHNXcEJEUjlXbXRwckk) and load it to the program.
+3. The voicebank that comes with the program is the lite voicebank that support only 1 speaking mode.  For full program demostration, [download full voicebank sample (149 MB)](https://drive.google.com/open?id=0B-zXMFcTjHNXcEJEUjlXbXRwckk) and load it to the program.
 
 ## Code explanation
 ### Using AudioInputStream with Clip
