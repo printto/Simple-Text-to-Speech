@@ -275,7 +275,7 @@ public class SpeakGUI extends JFrame implements Observer{
 			}
 		}
 	}
-	
+
 	/**
 	 * Make this JFrame visible.
 	 */
@@ -298,66 +298,76 @@ public class SpeakGUI extends JFrame implements Observer{
 	public class button1Pressed implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			setOnOff(false);
-			Thread speakingThread = new Thread(new Runnable(){
-				@Override
-				public void run() {
-					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 1 );
-				}});
-			speakingThread.start();
-			greetPanel.setText("Speaking " + sentenceIn.getText());
+			if(!sentenceIn.getText().equals("")){
+				setOnOff(false);
+				Thread speakingThread = new Thread(new Runnable(){
+					@Override
+					public void run() {
+						speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 1 );
+					}});
+				speakingThread.start();
+				greetPanel.setText("Speaking " + sentenceIn.getText());
+			}
 		}
 	}
 	public class button2Pressed implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			setOnOff(false);
-			Thread speakingThread = new Thread(new Runnable(){
-				@Override
-				public void run() {
-					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 2 );
-				}});
-			speakingThread.start();
-			greetPanel.setText("Speaking " + sentenceIn.getText());
+			if(!sentenceIn.getText().equals("")){
+				setOnOff(false);
+				Thread speakingThread = new Thread(new Runnable(){
+					@Override
+					public void run() {
+						speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 2 );
+					}});
+				speakingThread.start();
+				greetPanel.setText("Speaking " + sentenceIn.getText());
+			}
 		}
 	}
 	public class button3Pressed implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			setOnOff(false);
-			Thread speakingThread = new Thread(new Runnable(){
-				@Override
-				public void run() {
-					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 3 );
-				}});
-			speakingThread.start();
-			greetPanel.setText("Speaking " + sentenceIn.getText());
+			if(!sentenceIn.getText().equals("")){
+				setOnOff(false);
+				Thread speakingThread = new Thread(new Runnable(){
+					@Override
+					public void run() {
+						speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 3 );
+					}});
+				speakingThread.start();
+				greetPanel.setText("Speaking " + sentenceIn.getText());
+			}
 		}
 	}
 	public class button4Pressed implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			setOnOff(false);
-			Thread speakingThread = new Thread(new Runnable(){
-				@Override
-				public void run() {
-					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 4 );
-				}});
-			speakingThread.start();
-			greetPanel.setText("Speaking " + sentenceIn.getText());
+			if(!sentenceIn.getText().equals("")){
+				setOnOff(false);
+				Thread speakingThread = new Thread(new Runnable(){
+					@Override
+					public void run() {
+						speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 4 );
+					}});
+				speakingThread.start();
+				greetPanel.setText("Speaking " + sentenceIn.getText());
+			}
 		}
 	}
 	public class button5Pressed implements ActionListener{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			setOnOff(false);
-			Thread speakingThread = new Thread(new Runnable(){
-				@Override
-				public void run() {
-					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 5 );
-				}});
-			speakingThread.start();
-			greetPanel.setText("Speaking " + sentenceIn.getText());
+			if(!sentenceIn.getText().equals("")){
+				setOnOff(false);
+				Thread speakingThread = new Thread(new Runnable(){
+					@Override
+					public void run() {
+						speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 5 );
+					}});
+				speakingThread.start();
+				greetPanel.setText("Speaking " + sentenceIn.getText());
+			}
 		}
 	}
 }
