@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
  * This class read txt files and return array of elements in the line.
  * @author Pappim Pipatkasrira
  * @version 1.0
- * @since Mar 11, 2017
+ * @since May 26, 2017
  */
 public class LoadVoiceConfig {
 
