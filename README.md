@@ -7,6 +7,8 @@ Voicebank for this program can be created.
 
 Words are from the audio files in the voicebank.
 
+#### For the program's proposal is [here](https://stackoverflow.com/questions/23573020/clip-not-playing-sound-a-second-time).
+
 ### Library used
 - AudioInputStream  
   Use for opening audio file stream.
@@ -16,6 +18,7 @@ Words are from the audio files in the voicebank.
 ### Design Pattern used
 - Composite - Java developers need the Composite pattern because we often must manipulate composites exactly the same way we manipulate primitive objects. [Read more about Composite design pattern](http://www.javaworld.com/article/2074564/learn-java/a-look-at-the-composite-design-pattern.html)
 - Observer - Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category. [Read more about Observer design pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm)
+- Iterator - Iterator pattern is very commonly used design pattern in Java and .Net programming environment. This pattern is used to get a way to access the elements of a collection object in sequential manner without any need to know its underlying representation. [Read more about Iterator design pattern](https://www.tutorialspoint.com/design_pattern/iterator_pattern.htm)
 
 ### Installation
 1. [Download this zip file](https://github.com/printto/Simple-Text-to-Speech/blob/master/runnable%20program.zip)
