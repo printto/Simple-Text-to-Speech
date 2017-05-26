@@ -146,11 +146,11 @@ public class Speech extends Observable{
 
 	/**
 	 * Play 1 sound at a time.
-	 * @param soundFile , speed
+	 * @param soundFileTitle is the word that matches the wav file , speed
 	 */
-	private void playSound(String soundFile , int speed) {
+	private void playSound(String soundFileTitle , int speed) {
 		try{
-			File file = new File(soundFile.toLowerCase());
+			File file = new File(soundFileTitle.toLowerCase());
 			audioIn = AudioSystem.getAudioInputStream(file.toURI().toURL());  
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioIn);
@@ -158,15 +158,15 @@ public class Speech extends Observable{
 			try {
 				TimeUnit.MILLISECONDS.sleep(speed);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+				throw new RuntimeException(e);
 			}
 			clip.stop();
 		} catch (UnsupportedAudioFileException e) {
-			e.printStackTrace();
+			System.err.println("Unsupported Audio File");
 		} catch (IOException e) {
-			e.printStackTrace();
+			System.err.println("File "+ soundFileTitle + " not found.");
 		} catch (LineUnavailableException e) {
-			e.printStackTrace();
+			System.err.println("Line Unavailable.");
 		}
 	}
 }

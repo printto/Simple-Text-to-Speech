@@ -70,8 +70,6 @@ public class SpeakGUI extends JFrame implements Observer{
 		initTextFormat();
 		initProfile();
 		initButtons();
-		this.setTitle("Printto Speech");
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		initComponents();
 		initActions();
 	}
@@ -80,6 +78,8 @@ public class SpeakGUI extends JFrame implements Observer{
 	 * Initialize TextField Format for speaking speed
 	 */
 	public void initTextFormat(){
+		this.setTitle("Printto Speech");
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		NumberFormat numberFormat = NumberFormat.getIntegerInstance();
 		NumberFormatter numberFormatter = new NumberFormatter(numberFormat);
 		numberFormatter.setValueClass(Integer.class);
@@ -277,6 +277,22 @@ public class SpeakGUI extends JFrame implements Observer{
 			}
 		}
 	}
+	
+	/**
+	 * Make this JFrame visible.
+	 */
+	public void run(){
+		this.setVisible(true);
+	}
+
+	/**
+	 * Update when finish playing sound.
+	 */
+	@Override
+	public void update(Observable o, Object arg) {
+		setOnOff(true);
+		greetPanel.setText(String.format(spokenFormat, sentenceIn.getText()));
+	}
 
 	/**
 	 * ActionListener classes for speaking.
@@ -291,7 +307,7 @@ public class SpeakGUI extends JFrame implements Observer{
 					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 1 );
 				}});
 			speakingThread.start();
-			greetPanel.setText(String.format(spokenFormat, sentenceIn.getText()));
+			greetPanel.setText("Speaking " + sentenceIn.getText());
 		}
 	}
 	public class button2Pressed implements ActionListener{
@@ -304,7 +320,7 @@ public class SpeakGUI extends JFrame implements Observer{
 					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 2 );
 				}});
 			speakingThread.start();
-			greetPanel.setText(String.format(spokenFormat, sentenceIn.getText()));
+			greetPanel.setText("Speaking " + sentenceIn.getText());
 		}
 	}
 	public class button3Pressed implements ActionListener{
@@ -317,7 +333,7 @@ public class SpeakGUI extends JFrame implements Observer{
 					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 3 );
 				}});
 			speakingThread.start();
-			greetPanel.setText(String.format(spokenFormat, sentenceIn.getText()));
+			greetPanel.setText("Speaking " + sentenceIn.getText());
 		}
 	}
 	public class button4Pressed implements ActionListener{
@@ -330,7 +346,7 @@ public class SpeakGUI extends JFrame implements Observer{
 					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 4 );
 				}});
 			speakingThread.start();
-			greetPanel.setText(String.format(spokenFormat, sentenceIn.getText()));
+			greetPanel.setText("Speaking " + sentenceIn.getText());
 		}
 	}
 	public class button5Pressed implements ActionListener{
@@ -343,19 +359,7 @@ public class SpeakGUI extends JFrame implements Observer{
 					speech.speakSentence(sentenceIn.getText() , Integer.parseInt( speed.getText() ) , 5 );
 				}});
 			speakingThread.start();
-			greetPanel.setText(String.format(spokenFormat, sentenceIn.getText()));
+			greetPanel.setText("Speaking " + sentenceIn.getText());
 		}
-	}
-
-	/**
-	 * Make this JFrame visible.
-	 */
-	public void run(){
-		this.setVisible(true);
-	}
-
-	@Override
-	public void update(Observable o, Object arg) {
-		setOnOff(true);
 	}
 }

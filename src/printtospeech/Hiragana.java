@@ -70,6 +70,11 @@ public class Hiragana {
 		return romaArray;
 	}
 
+	/**
+	 * Translate Hiragana character to Romaji.
+	 * @param word
+	 * @return
+	 */
 	private String hiraganaToRomaji(String word){
 		switch(word){
 		case "ア":
@@ -303,13 +308,6 @@ public class Hiragana {
 			return "n";
 		default:
 			return word;
-		}
-	}
-
-	private String kataganaToRomaji(String word){
-		switch(word){
-		default:
-			return null;
 		}
 	}
 

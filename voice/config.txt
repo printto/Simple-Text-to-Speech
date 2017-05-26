@@ -11,9 +11,9 @@
 # (Middle words) - Folder name to load the word from. For all the words between the starting and ending words.
 # (Ending word) - Folder name to load the word from. For the Ending word.
 
-# To make the button invisible, just set button text to “none”.
+# To make the button invisible, just set button text to "none".
 
 button1 = Default Speaking , normal , normal , normal
-button2 = Style-1 Speaking , normal , high , normal
+button2 = none
 button4 = none
 button5 = none
