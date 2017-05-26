@@ -8,9 +8,9 @@ Voicebank for this program can be created.
 Words are from the audio files in the voicebank.
 
 ### Used library
-- AudioInputStream
+- AudioInputStream  
   Use for opening audio file stream.
-- Clip
+- Clip  
   Use for audio file.
 
 ### Installation
