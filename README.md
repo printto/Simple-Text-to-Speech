@@ -7,7 +7,7 @@ Voicebank for this program can be created.
 
 Words are from the audio files in the voicebank.
 
-#### For the program's proposal is [here](https://stackoverflow.com/questions/23573020/clip-not-playing-sound-a-second-time).
+#### For the program's proposal is [here](https://github.com/printto/Simple-Text-to-Speech/blob/master/proposal.pdf).
 
 ### Library used
 - AudioInputStream  
