@@ -1,6 +1,6 @@
 # Simple Text-to-Speech
 
-### by Pappim Pipatkasrira
+### by Pappim Pipatkasrira (PRINTmov)
 
 This program read your text to sentence then speak.
 Voicebank for this program can be created.
@@ -9,12 +9,16 @@ Words are from the audio files in the voicebank.
 
 #### For the program's proposal is [here](https://github.com/printto/Simple-Text-to-Speech/blob/master/proposal.pdf).
 
+### Goal of this project
+This project was created back in 2017 for me (repository owner) to study creating a program in Java.
+This project was used in OOP course 2017 (my 1st year of Software Engineering at Kasetsart University) as my course project.
+
 ### Library used
 - AudioInputStream  
   Use for opening audio file stream.
 - Clip  
   Use for audio file.
-  
+
 ### Design Pattern used
 - Composite - Java developers need the Composite pattern because we often must manipulate composites exactly the same way we manipulate primitive objects. [Read more about Composite design pattern](http://www.javaworld.com/article/2074564/learn-java/a-look-at-the-composite-design-pattern.html)
 - Observer - Observer pattern is used when there is one-to-many relationship between objects such as if one object is modified, its depenedent objects are to be notified automatically. Observer pattern falls under behavioral pattern category. [Read more about Observer design pattern](https://www.tutorialspoint.com/design_pattern/observer_pattern.htm)
